@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019091331) do
+ActiveRecord::Schema.define(version: 20151020173337) do
 
   create_table "decisions", force: :cascade do |t|
     t.string   "title"
     t.text     "forecast"
     t.date     "review_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "outcomes", force: :cascade do |t|
+    t.text     "actual"
+    t.string   "strength"
+    t.string   "weakness"
+    t.integer  "decision_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
