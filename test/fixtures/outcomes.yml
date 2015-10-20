@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  actual: MyText
+  strength: MyString
+  weakness: MyString
+  decision_id: 1
+
+two:
+  actual: MyText
+  strength: MyString
+  weakness: MyString
+  decision_id: 1
