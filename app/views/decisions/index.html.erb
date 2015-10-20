@@ -1,0 +1,12 @@
+<h1>My decisions</h1>
+
+<% @decisions.each do |decision| %>
+<h2><a><%= link_to decision.title, decision %></a></p>
+<% end %>
+
+
+<!-- @ is for instance variables: created in the
+controller and shared in the view.
+
+Whenever you write do |decision| you create a
+local variable in the block of code. -->

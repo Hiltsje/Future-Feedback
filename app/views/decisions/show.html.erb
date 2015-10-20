@@ -1,0 +1,8 @@
+<h1>Decision showpage</h1>
+
+<h2><%= @decision.title %></h2>
+<p><%= @decision.created_at %></p>
+<p><%= @decision.forecast %></p>
+<p><%= @decision.review_date %></p>
+
+<%= link_to "Delete Decision", decision_path(@decision), method: :delete, data: { confirm: "Are you sure?" } %>

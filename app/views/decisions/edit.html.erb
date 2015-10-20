@@ -1,0 +1,12 @@
+<%= form_for @decision do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %> <br/>
+
+  <%= f.label :forecast %>:
+  <%= f.text_area :forecast %> <br/>
+
+  <%= f.label :review_date %>:
+  <%= f.date_field :review_date %> <br/>
+
+  <%= f.submit %>
+<% end %>
