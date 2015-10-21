@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :decisions do
     resources :outcomes
 end
+    resources :outcomes
   root 'decisions#index'
 end
 
