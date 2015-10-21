@@ -1,5 +1,17 @@
-<h1>My decisions</h1>
+<%= form_for @decision_new do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %> <br/>
 
+  <%= f.label :forecast %>:
+  <%= f.text_area :forecast %> <br/>
+
+  <%= f.label :review_date %>:
+  <%= f.date_select :review_date, :order => [:day, :month, :year] %> <br/>
+
+  <%= f.submit %>
+<% end %>
+
+<h1>My decisions</h1>
 <% @decisions.each do |decision| %>
 <h2><a><%= link_to decision.title, decision %></a></p>
 <% end %>

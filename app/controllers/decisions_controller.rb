@@ -4,6 +4,7 @@ before_action :find_decision, only: [:show, :edit, :update, :destroy]
   def index
 # gets all rows from decision table and puts it in @decision variable
     @decisions = Decision.all
+    @decision_new = Decision.new
   end
 
   def show
