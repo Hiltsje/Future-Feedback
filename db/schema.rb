@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151020173337) do
+ActiveRecord::Schema.define(version: 20151020195924) do
 
   create_table "decisions", force: :cascade do |t|
     t.string   "title"
@@ -25,9 +25,11 @@ ActiveRecord::Schema.define(version: 20151020173337) do
     t.text     "actual"
     t.string   "strength"
     t.string   "weakness"
-    t.integer  "decision_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "decision_id"
   end
+
+  add_index "outcomes", ["decision_id"], name: "index_outcomes_on_decision_id"
 
 end

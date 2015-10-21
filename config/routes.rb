@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :decisions
+  resources :decisions do
+    resources :outcomes
+end
   root 'decisions#index'
 end
 

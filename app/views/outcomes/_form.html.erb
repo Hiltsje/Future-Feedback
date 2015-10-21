@@ -1,0 +1,11 @@
+<%= form_for([@decision, @decision.outcomes.build]) do |f| %>
+  <%= f.label :actual %>:
+  <%= f.text_field :actual %> <br/>
+
+  <%= f.label :strength %>:
+  <%= f.text_area :strength %> <br/>
+
+  <%= f.label :weakness %>:
+  <%= f.text_area :weakness %> <br/>
+  <%= f.submit %>
+  <% end %>

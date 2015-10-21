@@ -1,3 +1,3 @@
 class Decision < ActiveRecord::Base
-  has_one :outcome
+  has_many :outcomes
 end
