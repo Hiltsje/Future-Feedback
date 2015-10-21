@@ -7,5 +7,11 @@
 
 <%= link_to "Delete Decision", decision_path(@decision), method: :delete, data: { confirm: "Are you sure?" } %>
 
-<%= render "outcomes/form" %>
-<%= render "outcomes/outcome" %>
+<!-- <%= render "outcomes/form" %>-->
+
+
+<%if @decision.outcomes.length <= 1 %>
+    <%= render "outcomes/form" %>
+    <% else %>
+      <%= render "outcomes/outcome" %>
+<% end %>
