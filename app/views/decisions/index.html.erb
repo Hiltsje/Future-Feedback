@@ -1,3 +1,4 @@
+<h1>Add decision</h1>
 <%= form_for @decision_new do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title %> <br/>
@@ -10,10 +11,12 @@
 
   <%= f.submit %>
 <% end %>
-
-<h1>My decisions</h1>
+<hr>
+<h1>My upcoming reviews</h1>
 <% @decisions.each do |decision| %>
-<h2><a><%= link_to decision.title, decision %></a></p>
+<h2><a><%= link_to decision.title, decision %></a></h2>
+<p><%= decision.review_date %></p>
+<hr>
 <% end %>
 
 
