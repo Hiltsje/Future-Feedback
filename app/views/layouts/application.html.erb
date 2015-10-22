@@ -16,6 +16,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <!-- M(aterial)D(esign)Light framework -->
   </head>
+
   <body>
     <div class="container">
       <div class="header clearfix">
@@ -28,6 +29,7 @@
           <h3 class="text-muted"><%= link_to "Future Feedback", root_url %></h3>
         </nav>
       </div>
+
       <div class="jumbotron">
         <img src="http://blogs-images.forbes.com/drucker/files/2012/09/5789354033_4e2b652527_m1.jpg" class="img-circle" width="140px">
         <h1>Build on strengths</h1>
@@ -35,10 +37,8 @@
         <h6 class="text-muted">Peter Drucker - Managing oneself</h6>
       </div>
 
-      <div class="">
-
+      <div>
         <%= yield %>
-
       </div>
 
       <footer class="footer">
@@ -46,9 +46,5 @@
       </footer>
 
     </div> <!-- /container -->
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
   </body>
 </html>
