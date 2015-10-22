@@ -1,11 +1,18 @@
 
-<h1>list of strengts</h1>
-<% @outcomes.each do |outcome| %>
-<h2><a><%= outcome.strength%></a></h2>
-<% end %>
+<div class="row marketing">
+  <div class="col-xs-6 bg-success">
+      <h3>Stuff i should do more of ...</h3>
+      <% @outcomes.each do |outcome| %>
+        <p  ><%= outcome.strength%></p>
+        <hr>
+      <% end %>
+    </div>
 
-
-<h1>list of Weaknesses</h1>
-<% @outcomes.each do |outcome| %>
-<h2><a><%= outcome.weakness%></a></h2>
-<% end %>
+    <div class="col-xs-6 bg-danger">
+      <h3>Stuff i should do less of..</h3>
+      <% @outcomes.each do |outcome| %>
+        <p><%= outcome.weakness%></p>
+        <hr>
+      <% end %>
+    </div>
+</div>

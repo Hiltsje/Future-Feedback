@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FutureFeedback</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<a><%= link_to decision.title, decision %></a>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Future Feedback - Easy Feesback Analisis app</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!-- M(aterial)D(esign)Light framework icons-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <!-- M(aterial)D(esign)Light framework -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><%= link_to "Add decision", root_url %></li>
+            <li role="presentation"><%= link_to "My strengths", outcomes_path %></li>
+            <li role="presentation"><a href="#">About</a></li>
+          </ul>
+          <h3 class="text-muted"><%= link_to "Future Feedback", root_url %></h3>
+        </nav>
+      </div>
+      <div class="jumbotron">
+        <img src="http://blogs-images.forbes.com/drucker/files/2012/09/5789354033_4e2b652527_m1.jpg" class="img-circle" width="140px">
+        <h1>Build on strengths</h1>
+        <p class="lead">"The only way tho discover your strengths is through feedback analysis. Whenever you make a key decision/action, write down wat you expect will happen. Nine or 12 months later, compare is to the actual results. I have been doing this for 15 to 20 years now, and every time i do, i am suprised."</p>
+        <h6 class="text-muted">Peter Drucker - Managing oneself</h6>
+      </div>
 
-<%= yield %>
+      <div class="">
 
-</body>
+        <%= yield %>
+
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Hillie Kootstra 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
 </html>

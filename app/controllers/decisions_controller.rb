@@ -3,8 +3,10 @@ before_action :find_decision, only: [:show, :edit, :update, :destroy]
 
   def index
 # gets all rows from decision table and puts it in @decision variable
-    @decisions = Decision.order('review_date ASC').all
+    @decisions_review_list = Decision.order('review_date ASC').all
+    @decisions = Decision.order('review_date DESC').all
     @decision_new = Decision.new
+
   end
 
   def show

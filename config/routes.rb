@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  root 'decisions#index'
   resources :decisions do
     resources :outcomes
-end
+  end
     resources :outcomes
-  root 'decisions#index'
 end
 
 
